@@ -33,62 +33,22 @@
 - ️ **桌面应用** - Electron 打包，支持 Windows/macOS/Linux
 -  **Web 版本** - 浏览器直接运行
 
-## 🚀 快速开始
+## 📥 下载应用
 
-### 环境要求
-- Node.js >= 18
-- npm >= 9
+### 🖥️ Windows 下载
+- 前往 [GitHub Releases](https://github.com/BULI66/personal-time/releases) 下载最新版本
+- 下载 `Personal-Time-Setup-x.x.x.exe` 安装包
+- 运行安装程序即可使用
 
-### 安装依赖
-```bash
-npm install
-```
+### 📱 Web 版本
+- 直接在浏览器中访问：[GitHub Pages](#)（待部署）
+- 或使用开发模式运行：
+  ```bash
+  npm install
+  npm run dev
+  ```
 
-### 开发模式
-```bash
-# 启动 Web 开发服务器
-npm run dev
-
-# 启动 Electron 开发模式
-npm run electron:dev
-```
-
-### 构建
-```bash
-# 构建 Web 版本
-npm run build
-
-# 构建 Electron 桌面应用
-npm run electron:build
-```
-
-### 预览
-```bash
-npm run preview
-```
-
-### 测试
-```bash
-npm test
-```
-
-## 📦 打包说明
-
-### Windows
-```bash
-npm run electron:build
-```
-生成的安装包在 `release/` 目录下
-
-### macOS
-需要 macOS 环境和 Xcode 命令行工具
-
-### Linux
-```bash
-npm run electron:build
-```
-
-## ️ 技术栈
+## 🔧 开发指南
 
 - **前端框架**: React 18 + TypeScript
 - **构建工具**: Vite 5
@@ -102,30 +62,49 @@ npm run electron:build
 ```
 personal-time/
 ├── electron/           # Electron 主进程
-│   ├── main.js        # 主进程入口
+│   ├── main.cjs      # 主进程入口
 │   └── preload.js     # 预加载脚本
 ├── src/
 │   ├── components/    # React 组件
-│   │   ├── views/    # 视图组件
-│   │   ── ...
+│   │   ├── views/     # 视图组件
+│   │   └── ...
 │   ├── context/       # Context 管理
 │   ├── types/         # TypeScript 类型定义
 │   ├── utils/         # 工具函数
-│   ├── test/          # 单元测试
 │   └── main.tsx       # 应用入口
 ├── public/            # 静态资源
 ├── dist/              # 构建输出
-── release/           # Electron 打包输出
+├── release/           # Electron 打包输出
 └── package.json
 ```
 
-##  使用说明
+## 🚀 开发命令
 
-### 创建活动
-1. 点击任意日期或时间槽
-2. 或按 `Ctrl/Cmd + N` 快捷键
-3. 填写活动信息（标题、时间、分类等）
-4. 点击保存
+```bash
+# 安装依赖
+npm install
+
+# 开发模式
+npm run dev
+
+# 构建
+npm run build
+
+# Electron 开发模式
+npm run electron:dev
+
+# Electron 打包
+npm run electron:pack    # 快速打包（测试用）
+npm run electron:build   # 完整打包（发布用）
+
+# 预览构建结果
+npm run preview
+
+# 运行测试
+npm test
+```
+
+## 📝 使用说明
 
 ### 编辑活动
 - 点击活动卡片查看详情
@@ -153,29 +132,13 @@ personal-time/
 2. 导出备份：下载 JSON 文件
 3. 导入备份：选择 JSON 文件恢复
 
-##  发布到 GitHub
-
-### 初始化仓库
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-```
-
-### 关联远程仓库
-```bash
-git remote add origin https://github.com/你的用户名/personal-time.git
-git branch -M main
-git push -u origin main
-```
-
 ## 📄 许可证
 
 MIT License
 
 ## ‍💻 作者
 
-Your Name
+BuLi
 
 ---
 
