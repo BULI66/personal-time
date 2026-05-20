@@ -1,9 +1,12 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, Menu } = require('electron');
 const path = require('path');
 const fs = require('fs');
 
 // 判断是否是开发模式
 const isDev = process.env.NODE_ENV === 'development';
+
+// 禁用原生菜单栏
+Menu.setApplicationMenu(null);
 
 let mainWindow;
 
